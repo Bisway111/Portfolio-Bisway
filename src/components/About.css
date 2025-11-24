@@ -1,0 +1,114 @@
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.skills-container {
+    margin-top: 2rem;
+}
+
+.skills-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+    animation: floatTag 3s ease-in-out infinite;
+}
+
+.skill-tag:nth-child(odd) {
+    animation-duration: 3.5s;
+    animation-delay: 0.5s;
+}
+
+.skill-tag:nth-child(even) {
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+@keyframes floatTag {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.skill-tag:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-5px) scale(1.1);
+    animation-play-state: paused;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-img-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #222, #333);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 2rem;
+}
+
+.about-img-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, var(--primary-color), transparent);
+    opacity: 0.1;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-image-container {
+        order: 1;
+        margin: 0 auto;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+}

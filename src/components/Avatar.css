@@ -1,0 +1,143 @@
+.avatar-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: floatAvatar 6s ease-in-out infinite;
+}
+
+.avatar-head {
+    width: 200px;
+    height: 160px;
+    background: #2a2a2a;
+    border-radius: 40px;
+    position: relative;
+    box-shadow:
+        inset 0 0 20px rgba(0, 0, 0, 0.5),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.avatar-face {
+    width: 160px;
+    height: 100px;
+    background: #000;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: inset 0 0 15px rgba(100, 108, 255, 0.2);
+    overflow: hidden;
+}
+
+.avatar-eye {
+    width: 30px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 15px var(--primary-color);
+    transition: height 0.1s;
+}
+
+.avatar-eye::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+/* Blinking animation class */
+.blink .avatar-eye {
+    height: 2px;
+    margin-top: 19px;
+    /* Center the closed eye line */
+}
+
+.avatar-antenna {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 30px;
+    background: #444;
+    z-index: 1;
+}
+
+.avatar-antenna::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-color);
+    animation: pulse 2s infinite;
+}
+
+.avatar-neck {
+    width: 60px;
+    height: 30px;
+    background: #333;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 0 0 15px 15px;
+}
+
+.avatar-body {
+    width: 140px;
+    height: 100px;
+    background: #2a2a2a;
+    position: absolute;
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px 30px 50px 50px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes floatAvatar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateX(-50%) scale(0.9);
+    }
+}
