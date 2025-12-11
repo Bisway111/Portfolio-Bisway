@@ -1,8 +1,9 @@
 import useScrollReveal from '../hooks/useScrollReveal';
 import './About.css';
+import profileImage from '../assets/profile-image.png';
 
 const About = () => {
-    const skills = ['React', 'JavaScript', 'CSS/SCSS', 'Node.js', 'UI/UX Design', 'Git'];
+    const skills = ['Java', 'JavaScript', 'Spring Boot', 'REST APIs', 'SQL', 'MySQL', 'PostgreSQL', 'MongoDB', 'Firebase', 'Redis', 'HTML', 'CSS', 'Jira', 'Git'];
     const [ref, isVisible] = useScrollReveal();
 
     return (
@@ -11,12 +12,10 @@ const About = () => {
                 <div className="about-text">
                     <h2>About Me</h2>
                     <p>
-                        I'm a passionate developer with a keen eye for design. I specialize in building
-                        modern web applications that are not only functional but also visually appealing.
-                    </p>
-                    <p>
-                        With a background in both design and engineering, I bridge the gap between
-                        aesthetics and performance.
+                        Backend-focused Java Developer experienced in building scalable REST APIs and distributed
+                        systems using Spring Boot, Redis, Firebase, and SQL/NoSQL databases. Skilled in system
+                        design and performance tuning, seeking Software Engineer Entry-level roles to contribute
+                        to high-performance backend platforms.
                     </p>
 
                     <div className="skills-container">
@@ -30,9 +29,7 @@ const About = () => {
                 </div>
 
                 <div className="about-image">
-                    <div className="about-img-placeholder">
-                        <span>Profile Image</span>
-                    </div>
+                    <img src={profileImage} alt="Profile" className="profile-img" />
                 </div>
             </div>
         </section>

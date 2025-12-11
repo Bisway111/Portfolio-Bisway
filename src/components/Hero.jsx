@@ -5,7 +5,7 @@ import './Hero.css';
 
 const Hero = () => {
     const [text, setText] = useState('');
-    const fullText = 'Creative Developer';
+    const fullText = 'Backend Java Developer';
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
@@ -58,7 +58,7 @@ const Hero = () => {
                     <div className="hero-text-area">
                         <h1 className="hero-title">{text}<span className="cursor">|</span></h1>
                         <p className="hero-subtitle">
-                            Building digital experiences that merge art, code, and innovation.
+                            Building scalable REST APIs and distributed systems with Spring Boot.
                         </p>
                         <a
                             href="#projects"

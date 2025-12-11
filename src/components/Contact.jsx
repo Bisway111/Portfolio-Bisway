@@ -13,14 +13,13 @@ const Contact = () => {
                     Whether you have a question or just want to say hi, I'll try my best to get back to you!
                 </p>
 
-                <a href="mailto:hello@example.com" className="email-button">
-                    hello@example.com
+                <a href="mailto:singhabis190@gmail.com" className="email-button">
+                    singhabis190@gmail.com
                 </a>
 
                 <div className="social-links">
-                    <a href="#" className="social-link">GitHub</a>
-                    <a href="#" className="social-link">LinkedIn</a>
-                    <a href="#" className="social-link">Twitter</a>
+                    <a href="https://github.com/Bisway111" className="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/bisway-singha/" className="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
 
                 <footer className="footer">
