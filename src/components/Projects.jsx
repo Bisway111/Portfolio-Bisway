@@ -1,5 +1,8 @@
 import useScrollReveal from '../hooks/useScrollReveal';
 import './Projects.css';
+import euroclothLogo from '../assets/eurocloth-logo.png';
+import premierLeagueLogo from '../assets/premier-league-logo.jpg';
+import currencyConverterLogo from '../assets/currency-converter-logo.jpg';
 
 const Projects = () => {
     const projects = [
@@ -9,7 +12,7 @@ const Projects = () => {
             description: 'A modern fully functional e-commerce website for clothing, built with HTML, CSS, JavaScript and Firebase Authentication, Firestore, Storage, and Hosting.',
             link: 'https://myeurocloth.shop',
             github: 'https://github.com/Bisway111/E-Commerce',
-            image: '/src/assets/eurocloth-logo.png'
+            image: euroclothLogo
         },
         {
             id: 2,
@@ -17,7 +20,7 @@ const Projects = () => {
             description: 'A scalable backend powering Premier League data — including players, teams, user accounts, and secure authentication — built with Java 21, Spring Boot, Redis, and PostgreSQL.',
             link: 'http://premierleague-backend-production.up.railway.app/swagger-ui/index.html',
             github: 'https://github.com/Bisway111/PremierLeague-Backend-Live-',
-            image: '/src/assets/premier-league-logo.jpg'
+            image: premierLeagueLogo
         },
         {
             id: 3,
@@ -25,7 +28,7 @@ const Projects = () => {
             description: 'A real-time currency converter application with live exchange rates. Features a clean interface for converting between multiple currencies with up-to-date conversion rates.',
             link: 'https://currency-converter-amber-iota.vercel.app/',
             github: 'https://github.com/Bisway111/Currency-converter?tab=readme-ov-file',
-            image: '/src/assets/currency-converter-logo.jpg'
+            image: currencyConverterLogo
         }
     ];
 
